@@ -25,4 +25,12 @@ describe('Test', () => {
     const result = add('//a\n2a3a5');
     expect(result).toEqual(10);
   });
+  it('negative number', () => {
+    const result = add('//a\n-2a-3a5');
+    expect(result).toEqual('negatives not allowed -2,-3');
+  });
+  it('bigger number', () => {
+    const result = add('//a\n10001a2');
+    expect(result).toEqual(2);
+  });
 });
