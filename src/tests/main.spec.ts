@@ -33,4 +33,8 @@ describe('Test', () => {
     const result = add('//a\n10001a2');
     expect(result).toEqual(2);
   });
+  it('delimiter more than one character', () => {
+    const result = add('//[***]\n1***2***3');
+    expect(result).toEqual(6);
+  });
 });
